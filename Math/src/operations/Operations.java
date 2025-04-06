@@ -1,0 +1,154 @@
+package operations;
+import java.util.Scanner;
+public class Operations {
+	
+	public static void main(String[] args)
+	{
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter two numbers and an operation between them:");
+		String express = input.nextLine();
+		String noSpace = express.replaceAll("\\s", "");
+		System.out.println("You Entered The Expression: " + noSpace);
+		boolean flag1 = false;
+		int num = 0;
+		for(int i = 0; i < noSpace.length(); i++)
+		{
+			if(noSpace.substring(i, i+1).contains("+"))
+			{
+				num = i;
+			}
+			if(noSpace.substring(i, i+1).contains("-"))
+			{
+				num = i;
+			}
+			if(noSpace.substring(i, i+1).contains("*"))
+			{
+				num = i;
+			}
+			if(noSpace.substring(i, i+1).contains("/"))
+			{
+				num = i;
+			}
+			if(noSpace.substring(i, i+1).contains("%"))
+			{
+				num = i;
+			}
+		}
+		if(num == 0)
+		{
+			input.close();
+			throw new IllegalArgumentException("Expression entered wrong");
+		}
+		int firstNum = Integer.parseInt(noSpace.substring(0, num));
+		String sign = noSpace.substring(num, num + 1);
+		int secondNum = Integer.parseInt(noSpace.substring(num + 1));
+		int calculation = 0;
+		if(sign.equals("+"))
+		{
+			calculation = firstNum + secondNum;
+		}
+		if(sign.equals("-"))
+		{
+			calculation = firstNum - secondNum;
+		}
+		if(sign.equals("*"))
+		{
+			calculation = firstNum * secondNum;
+		}
+		if(sign.equals("/"))
+		{
+			calculation = firstNum / secondNum;	
+		}
+		if(sign.equals("%"))
+		{
+			calculation = firstNum % secondNum;	
+		}
+		
+		
+		System.out.println(calculation);
+		
+//		while(!flag1)
+//		{
+//			
+//		}
+//		for(int i = 0; i < express.length(); i++)
+//		{
+//			
+//		}
+		System.out.print("Would you like to perform an operation to your previous answer? ");
+		String answer = input.nextLine();
+		boolean flag = true;
+		if(answer.substring(0,1).equalsIgnoreCase("y"))
+		{
+			System.out.println("I'm taking that as a YES");
+			flag = true;
+		}
+		else
+		{
+			System.out.println("I'm taking that as a NO");
+			flag = false;
+		}
+		
+		while(!flag);
+		{
+			
+			System.out.print("Enter an operation and a number:");
+			express = input.nextLine();
+			noSpace = express.replaceAll("\\s", "");
+			System.out.println("You Entered The Expression: " + noSpace);
+			for(int i = 0; i < noSpace.length(); i++)
+			{
+				if(noSpace.substring(i, i+1).contains("+"))
+				{
+					num = i;
+				}
+				if(noSpace.substring(i, i+1).contains("-"))
+				{
+					num = i;
+				}
+				if(noSpace.substring(i, i+1).contains("*"))
+				{
+					num = i;
+				}
+				if(noSpace.substring(i, i+1).contains("/"))
+				{
+					num = i;
+				}
+				if(noSpace.substring(i, i+1).contains("%"))
+				{
+					num = i;
+				}
+			}
+			sign = noSpace.substring(num, num + 1);
+			secondNum = Integer.parseInt(noSpace.substring(num + 1));
+			
+			if(sign.equals("+"))
+			{
+				calculation = calculation + secondNum;
+			}
+			if(sign.equals("-"))
+			{
+				calculation = calculation - secondNum;
+			}
+			if(sign.equals("*"))
+			{
+				calculation = calculation * secondNum;
+			}
+			if(sign.equals("/"))
+			{
+				calculation = calculation / secondNum;	
+			}
+			if(sign.equals("%"))
+			{
+				calculation = calculation % secondNum;	
+			}
+			
+			
+			System.out.println(calculation);
+			input.close();
+			
+		}
+		input.close();
+	}
+}

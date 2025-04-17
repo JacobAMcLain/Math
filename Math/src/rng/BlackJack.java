@@ -2,6 +2,7 @@ package rng;
 import java.util.Scanner;
 
 /*
+ * 
  * This application is a game of Black Jack
  * @author: Jacob McLain
  */

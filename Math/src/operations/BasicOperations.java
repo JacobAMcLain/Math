@@ -1,6 +1,6 @@
 package operations;
 import java.util.Scanner;
-public class Operations {
+public class BasicOperations {
 	
 	public static void main(String[] args)
 	{

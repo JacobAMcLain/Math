@@ -42,5 +42,6 @@ public class Rng___to____ {
 		
 		int rand = (int) (num1 + (Math.random()*(num2 - num1 + 1)));
 		System.out.println("The random number between " + num1 + " & " + num2 + " is: " + rand);
+		input.close();
 	}
 }

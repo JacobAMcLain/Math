@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /*
  * 
- * This application is a game of Black Jack
+ * This program is a game of Black Jack
  * @author: Jacob McLain
  * @date: 4/17/2025
  */

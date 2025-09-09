@@ -36,5 +36,6 @@ public class AreaRectangleCalc {
 		
 		double area = num1 * num2;
 		System.out.println("The area of the rectangle with sides of length " + num1 + " & " + num2 + " is " + area);
+		input.close();
 	}
 }

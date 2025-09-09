@@ -18,7 +18,7 @@ public class Roots {
 			System.out.print("Enter an integer/double (what you are taking the root of): ");
 			num = input.nextDouble();
 		}
-		boolean flag2 = false;
+		
 		if(num < 0)
 		{
 			flag = true;

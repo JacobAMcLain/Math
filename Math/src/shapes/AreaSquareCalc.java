@@ -22,5 +22,6 @@ public class AreaSquareCalc {
 		System.out.print("The area of the square with a side length of " + num1);
 		num1 *= num1;
 		System.out.println(" is " + num1);
+		input.close();
 	}
 }

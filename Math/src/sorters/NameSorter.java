@@ -18,6 +18,7 @@ public class NameSorter {
 		String name = input.next();
 		while(!name.equalsIgnoreCase("stop"))
 		{
+			System.out.println("You entered: " + name);
 			list.addLast(name);
 			name = input.next();
 		}

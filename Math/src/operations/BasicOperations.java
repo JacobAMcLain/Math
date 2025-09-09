@@ -10,29 +10,34 @@ public class BasicOperations {
 		String express = input.nextLine();
 		String noSpace = express.replaceAll("\\s", "");
 		System.out.println("You Entered The Expression: " + noSpace);
-		boolean flag1 = false;
+		
 		int num = 0;
 		for(int i = 0; i < noSpace.length(); i++)
 		{
 			if(noSpace.substring(i, i+1).contains("+"))
 			{
 				num = i;
+				break;
 			}
 			if(noSpace.substring(i, i+1).contains("-"))
 			{
 				num = i;
+				break;
 			}
 			if(noSpace.substring(i, i+1).contains("*"))
 			{
 				num = i;
+				break;
 			}
 			if(noSpace.substring(i, i+1).contains("/"))
 			{
 				num = i;
+				break;
 			}
 			if(noSpace.substring(i, i+1).contains("%"))
 			{
 				num = i;
+				break;
 			}
 		}
 		if(num == 0)
@@ -78,7 +83,7 @@ public class BasicOperations {
 //		}
 		System.out.print("Would you like to perform an operation to your previous answer? ");
 		String answer = input.nextLine();
-		boolean flag = true;
+		boolean flag = false;
 		if(answer.substring(0,1).equalsIgnoreCase("y"))
 		{
 			System.out.println("I'm taking that as a YES");
@@ -87,14 +92,13 @@ public class BasicOperations {
 		else
 		{
 			System.out.println("I'm taking that as a NO");
-			flag = false;
-		}
-		
-		while(!flag);
-		{
 			
+		}
+		while(flag)
+		{
+			System.out.println("test");
 			System.out.print("Enter an operation and a number:");
-			express = input.nextLine();
+			express = input.next();
 			noSpace = express.replaceAll("\\s", "");
 			System.out.println("You Entered The Expression: " + noSpace);
 			for(int i = 0; i < noSpace.length(); i++)
@@ -103,52 +107,63 @@ public class BasicOperations {
 				{
 					num = i;
 				}
-				if(noSpace.substring(i, i+1).contains("-"))
+				else if(noSpace.substring(i, i+1).contains("-"))
 				{
 					num = i;
 				}
-				if(noSpace.substring(i, i+1).contains("*"))
+				else if(noSpace.substring(i, i+1).contains("*"))
 				{
 					num = i;
 				}
-				if(noSpace.substring(i, i+1).contains("/"))
+				else if(noSpace.substring(i, i+1).contains("/"))
 				{
 					num = i;
 				}
-				if(noSpace.substring(i, i+1).contains("%"))
+				else if(noSpace.substring(i, i+1).contains("%"))
 				{
 					num = i;
 				}
 			}
 			sign = noSpace.substring(num, num + 1);
 			secondNum = Integer.parseInt(noSpace.substring(num + 1));
-			
+		
 			if(sign.equals("+"))
 			{
 				calculation = calculation + secondNum;
 			}
-			if(sign.equals("-"))
+			else if(sign.equals("-"))
 			{
 				calculation = calculation - secondNum;
 			}
-			if(sign.equals("*"))
+			else if(sign.equals("*"))
 			{
 				calculation = calculation * secondNum;
 			}
-			if(sign.equals("/"))
+			else if(sign.equals("/"))
 			{
 				calculation = calculation / secondNum;	
 			}
-			if(sign.equals("%"))
+			else if(sign.equals("%"))
 			{
 				calculation = calculation % secondNum;	
 			}
 			
 			
 			System.out.println(calculation);
-			input.close();
-			
-		}
+			System.out.print("Would you like to perform an operation to your previous answer? ");
+			answer = input.next();
+			if(answer.substring(0,1).equalsIgnoreCase("y"))
+			{
+				System.out.println("I'm taking that as a YES");
+				
+			}
+			else
+			{
+				System.out.println("I'm taking that as a NO");
+				flag = false;
+			}
+		}	
 		input.close();
+		System.out.println("Basic Operations terminated");
 	}
 }

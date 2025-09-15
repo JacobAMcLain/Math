@@ -65,7 +65,6 @@ public class BlackJack {
 		}
 		
 		int firstCardNum = firstCard % 13 + 1;
-		int secondCardNum = secondCard % 13 + 1;
 		//Printing to the user what they got in terms of an actual card
 		if(firstCardNum == 11)
 		{
@@ -95,6 +94,7 @@ public class BlackJack {
 		}
 		
 		//Same thing but with the second card
+		int secondCardNum = secondCard % 13 + 1;
 		if(secondCardNum == 11)
 		{
 			System.out.println("You got a Jack of " + secondSuit);
@@ -128,7 +128,7 @@ public class BlackJack {
 		{
 			System.out.println("You got 21!! You won Black Jack!!!!");
 		}
-		else if(total > 22)
+		else if(total >= 22)
 		{
 			System.out.println("Since you got 2 aces and went over 21, converting one of your aces to a 1");
 			total -= 10;
@@ -154,12 +154,11 @@ public class BlackJack {
 				
 				while(total < 21 && choice.equalsIgnoreCase("H"))
 				{
-					System.out.println("Test1");
 					boolean cardCheck = false;
+					int newCard = 0;
 					while(!cardCheck)
 					{
-						int newCard = (int) (Math.random()*52 + 1);
-						System.out.println(newCard);
+						newCard = (int) (Math.random()*52 + 1);
 						cardCheck = true;
 						for(int i = 0; i < cardList.size(); i++)
 						{
@@ -167,15 +166,14 @@ public class BlackJack {
 							if(newCard == cardList.get(i))
 							{
 								cardCheck = false;
-								cardList.add(newCard);
+								
 							}
 							
 							
 						}
-					
-						
 					}
-					int newCard = cardList.get(cardList.size()-1);
+					cardList.add(newCard);
+					
 				
 					String newSuit = "";
 					if(newCard / 13 == 0)
@@ -195,7 +193,7 @@ public class BlackJack {
 						newSuit = "Spades";
 					}
 			
-					int newCardNum = firstCard % 13 + 1;
+					int newCardNum = newCard % 13 + 1;
 				
 					//Printing to the user what they got in terms of an actual card
 					if(newCardNum == 11)
@@ -235,7 +233,10 @@ public class BlackJack {
 						aces.remove(0);
 						System.out.println("Lowering your value to " + total);
 					}
-				
+					else if(aces.size() == 0 && total > 21)
+					{
+						System.out.println("You busted because your total was greater than 21!");
+					}
 					else if(total < 21)
 					{
 						System.out.println("Would you like to hit again or stay? (H for hit and S for stay)");
@@ -254,11 +255,13 @@ public class BlackJack {
 					}
 					else
 					{
-						System.out.println("You Busted because your total was greater than 21!");
+						System.out.println("You busted because your total was greater than 21!");
 					}
-				
+					if(choice.equalsIgnoreCase("S"))
+					{
+						System.out.println("Your total is: " + total);
+					}
 				}
-				
 			}
 			
 		}

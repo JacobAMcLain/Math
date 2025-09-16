@@ -21,7 +21,7 @@ public class Rng___to____ {
 		System.out.println("You Entered: " + num1);
 		
 		
-		
+		System.out.print("Enter a number: ");
 		while(!input.hasNextInt())
 		{
 			System.out.println("You did not enter an integer...\nTry Again!");

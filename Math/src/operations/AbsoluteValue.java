@@ -1,7 +1,11 @@
 package operations;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program takes a number and makes it positive if negative and does nothing if positive
+ * @author: Jacob McLain
+ */
 public class AbsoluteValue {
 	
 	public static void main(String[] args)

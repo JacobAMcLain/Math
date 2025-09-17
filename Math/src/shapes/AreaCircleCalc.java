@@ -1,7 +1,11 @@
 package shapes;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program calculates the area of a circle
+ * @author: Jacob McLain
+ */
 public class AreaCircleCalc {
 
 	public static void main(String[] args)

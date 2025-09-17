@@ -1,7 +1,11 @@
 package shapes;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program calculates the volume of a cylinder
+ * @author: Jacob McLain
+ */
 public class CylinderVolumeCalc {
 	
 	

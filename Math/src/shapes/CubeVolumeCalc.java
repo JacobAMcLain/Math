@@ -1,7 +1,11 @@
 package shapes;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program calculates the volume of a cube
+ * @author: Jacob McLain
+ */
 public class CubeVolumeCalc {
 
 	public static void main(String[] args)

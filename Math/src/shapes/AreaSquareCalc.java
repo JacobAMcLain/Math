@@ -1,7 +1,11 @@
 package shapes;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program calculates the area of a square
+ * @author: Jacob McLain
+ */
 public class AreaSquareCalc {
 
 	public static void main(String[] args)

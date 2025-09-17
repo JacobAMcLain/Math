@@ -1,7 +1,11 @@
 package shapes;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program calculates the area of a rectangle
+ * @author: Jacob McLain
+ */
 public class AreaRectangleCalc {
 
 	public static void main(String[] args)

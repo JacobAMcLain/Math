@@ -1,5 +1,10 @@
 package operations;
 import java.util.Scanner;
+/*
+ * 
+ * This program mimics a calulator to perform basic operations on numbers
+ * @author: Jacob McLain
+ */
 public class BasicOperations {
 	
 	public static void main(String[] args)

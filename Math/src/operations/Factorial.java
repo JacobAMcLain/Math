@@ -1,7 +1,11 @@
 package operations;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program retrives a number from the user and takes the factorial of it
+ * @author: Jacob McLain
+ */
 public class Factorial {
 
 	public static void main(String[] args)

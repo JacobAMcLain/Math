@@ -1,6 +1,12 @@
 package rng;
 
 import java.util.Scanner;
+/*
+ * 
+ * This program is allows the user to choose the amount of sides on a dice and uses RNG to determine what it lands on
+ * @author: Jacob McLain
+ * @date: 4/17/2025
+ */
 public class DiceRoller {
 
 	public static void main(String[] args)

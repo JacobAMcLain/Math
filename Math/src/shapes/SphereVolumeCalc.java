@@ -1,7 +1,11 @@
 package shapes;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program calculates the volume of a sphere
+ * @author: Jacob McLain
+ */
 public class SphereVolumeCalc {
 	public static void main(String[] args)
 	{

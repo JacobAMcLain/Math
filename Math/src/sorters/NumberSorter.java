@@ -2,7 +2,11 @@ package sorters;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
+ * 
+ * This program retrieves numbers from the user and sorts them
+ * @author: Jacob McLain
+ */
 public class NumberSorter {
 
 	public static void main(String[] args)

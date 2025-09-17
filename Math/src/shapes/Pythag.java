@@ -1,7 +1,11 @@
 package shapes;
 
 import java.util.Scanner;
-
+/*
+ * 
+ * This program calculates hypotenuse of a triangle given 2 legs
+ * @author: Jacob McLain
+ */
 public class Pythag {
 
 	public static void main(String[] args)

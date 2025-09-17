@@ -1,5 +1,10 @@
 package rng;
 import java.util.Scanner;
+/*
+ * 
+ * This program allows the user to pick a bounds for RNG
+ * @author: Jacob McLain
+ */
 public class Rng___to____ {
 
 	

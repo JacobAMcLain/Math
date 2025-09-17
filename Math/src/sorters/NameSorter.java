@@ -2,6 +2,11 @@ package sorters;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+/*
+ * 
+ * This program takes in names from the user and sorts them
+ * @author: Jacob McLain
+ */
 public class NameSorter {
 
 	public static void main(String[] args)

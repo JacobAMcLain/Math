@@ -1,5 +1,10 @@
 package operations;
 import java.util.Scanner;
+/*
+ * 
+ * This program can calculate a root to any degree of any number given by the user
+ * @author: Jacob McLain
+ */
 public class Roots {
 
 	public static void main(String[] args)
